@@ -562,6 +562,10 @@ a {
   display: block;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -714,10 +718,6 @@ a {
   margin-bottom: 5rem;
 }
 
-.mb-28 {
-  margin-bottom: 7rem;
-}
-
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -813,6 +813,16 @@ a {
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .flex-col {
@@ -961,6 +971,11 @@ a {
   background-repeat: no-repeat;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1019,11 +1034,6 @@ a {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .pb-14 {
@@ -1141,6 +1151,10 @@ a {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1158,6 +1172,10 @@ a {
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 @media (min-width: 1024px) {
@@ -1197,14 +1215,14 @@ a {
   }
 }
 
-.hover\:border-white:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .hover\:border-blue:hover {
   --tw-border-opacity: 1;
   border-color: rgb(55 117 237 / var(--tw-border-opacity));
+}
+
+.hover\:border-white:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .hover\:bg-black:hover {
@@ -1227,6 +1245,10 @@ a {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
 .group:hover .group-hover\:block {
   display: block;
 }
@@ -1239,6 +1261,14 @@ a {
 
 .group:hover .group-hover\:animate-spin {
   animation: spin 1s linear infinite;
+}
+
+.group:hover .group-hover\:opacity-5 {
+  opacity: 0.05;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 @media (min-width: 1024px) {
@@ -1256,10 +1286,6 @@ a {
 
   .lg\:left-1\/2 {
     left: 50%;
-  }
-
-  .lg\:top-0 {
-    top: 0px;
   }
 
   .lg\:top-\[-6px\] {
@@ -1292,6 +1318,10 @@ a {
     margin-bottom: 5rem;
   }
 
+  .lg\:mb-28 {
+    margin-bottom: 7rem;
+  }
+
   .lg\:mb-36 {
     margin-bottom: 9rem;
   }
@@ -1318,10 +1348,6 @@ a {
 
   .lg\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .lg\:mb-28 {
-    margin-bottom: 7rem;
   }
 
   .lg\:block {
@@ -1640,6 +1666,11 @@ a {
     padding-right: 3rem;
   }
 
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1653,11 +1684,6 @@ a {
   .lg\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .lg\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .lg\:pb-\[183px\] {
